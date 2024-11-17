@@ -28,6 +28,17 @@ public class HelloController {
 		}
 		
 	}
+
+	@GetMapping("/createObjectLimitCount")
+        public String createObject(int count) {
+                List<HeapOOM> list = new ArrayList<HeapOOM>();
+                System.out.println("hello list count");
+		for(int i=0;i<=count;i++){
+                        list.add(new HeapOOM());
+                }
+		return "count ok";
+
+        }
 	
 	@GetMapping("/createObjectSleep")
 	public void createObjectSleep() {
