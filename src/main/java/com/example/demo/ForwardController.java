@@ -30,7 +30,7 @@ public class ForwardController {
 	@GetMapping("/forwardPost")
 	public String forwardPost(String targetSvc, String targetApi) {
 		ResponseEntity<String> resEntity = null;
-		String url = "Http://" + targetSvc + "/" +targetApi;
+		String url = "http://" + targetSvc + "/" +targetApi;
 		System.out.println("url:"+url);
 		
         resEntity = restTemplate.postForEntity(url, "", String.class);
@@ -40,7 +40,7 @@ public class ForwardController {
 	@GetMapping("/forwardGet")
 	public String forwardGet(String targetSvc, String targetApi) {
 		ResponseEntity<String> resEntity = null;
-		String url = "Http://" + targetSvc + "/" +targetApi;
+		String url = "http://" + targetSvc + "/" +targetApi;
 		System.out.println("url:"+url);
 		
         resEntity = restTemplate.getForEntity(url, String.class);
